@@ -4,6 +4,7 @@ import HomeScreen from "./src/screen/HomeScreen";
 import CalendarScreen from "./src/screen/CalendarScreen";
 import MapScreen from "./src/screen/MapScreen";
 import Mypage from "./src/screen/Mypage";
+import TextScreen from "./src/screen/TextScreen";
 import ColorScreen from "./src/screen/ColorScreen";
 import ColorChange from "./src/screen/ColorChange";
 
@@ -15,6 +16,7 @@ const navigator = createStackNavigator(
     Mypage: Mypage,
     Color: ColorScreen,
     ColorChange: ColorChange,
+    Text: TextScreen,
   },
   {
     initialRouteName: "Home",

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { Button, View, Text } from "react-native";
 
+
 const ColorChange = () => {
-  const [red, setRed] = useState(Math.floor(Math.random() * 256));
-  const [green, setGreen] = useState(Math.floor(Math.random() * 256));
-  const [blue, setBlue] = useState(Math.floor(Math.random() * 256));
+  const [red, setRed] = useState(0);
+  const [green, setGreen] = useState(0);
+  const [blue, setBlue] = useState(0);
 
   return (
     <View>
@@ -12,39 +13,39 @@ const ColorChange = () => {
       <Button
         title="more red"
         onPress={() => {
-          setRed(red + 20);
+          handlePlusColor(red, setRed);
         }}
       />
       <Button
         title="less red"
         onPress={() => {
-          setRed(red - 20);
+          handleSubColor((red, setRed));
         }}
       />
       <Text>GREEN</Text>
       <Button
         title="more green"
         onPress={() => {
-          setGreen(green + 20);
+          handlePlusColor(green, setGreen);
         }}
       />
       <Button
         title="less green"
         onPress={() => {
-          setGreen(green - 20);
+          handleSubColor(green, setGreen);
         }}
       />
       <Text>BLUE</Text>
       <Button
         title="more blue"
         onPress={() => {
-          setBlue(blue + 20);
+          handlePlusColor(blue, setBlue);
         }}
       />
       <Button
         title="less blue"
         onPress={() => {
-          setBlue(blue - 20);
+          handleSubColor(blue, setBlue);
         }}
       />
       <View

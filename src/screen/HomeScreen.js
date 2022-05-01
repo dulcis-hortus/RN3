@@ -44,6 +44,13 @@ const HomeScreen = ({ navigation }) => {
           navigation.navigate("ColorChange");
         }}
       />
+      <TouchableOpacity
+        onPress={() => {
+          navigation.navigate("Text");
+        }}
+      >
+        <Text>If you want to Text, PUSH ME!</Text>
+      </TouchableOpacity>
     </View>
   );
 };
